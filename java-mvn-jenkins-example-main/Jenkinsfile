@@ -27,8 +27,6 @@ pipeline {
         stage('Create Docker Image') {
             steps {
                 sh 'ls'
-                sh 'chmod +x mvnw'
-                sh './mvnw clean install'
                 sh 'docker build -t "$IMAGE_NAME" .'
             }
         }
